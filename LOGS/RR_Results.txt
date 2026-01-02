@@ -1,0 +1,436 @@
+alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ ./run
+Testing RR Scheduling
+
+Process A : I will use CPU by 7s. 
+
+Process B : I will use CPU by 5s. 
+
+Process C : I will use CPU by 3s. 
+
+Process C : Finish! My response time is 1s and my total wait time is 7s. 
+Process B : Finish! My response time is 0s and my total wait time is 10s. 
+Process A : Finish! My response time is 0s and my total wait time is 10s. alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ dmesg
+[  142.153369] Working: A
+[  142.254540] Working: A
+[  142.355124] Working: A
+[  142.456814] Turnover ----> A
+[  142.558752] Working: A
+[  142.660321] Working: A
+[  142.761922] Working: A
+[  142.863434] Turnover ----> A
+[  142.965558] Working: A
+[  143.066027] Working: A
+[  143.156577] Working Denied: B
+[  143.168438] Working: A
+[  143.265135] Working Denied: B
+[  143.275372] Turnover ----> A
+[  143.366259] Working: B
+[  143.376133] Working Denied: A
+[  143.467751] Working: B
+[  143.478011] Working Denied: A
+[  143.569223] Working: B
+[  143.585363] Working Denied: A
+[  143.671180] Turnover ----> B
+[  143.686776] Working: A
+[  143.772177] Working Denied: B
+[  143.787717] Working: A
+[  143.874255] Working Denied: B
+[  143.891444] Working: A
+[  143.976884] Working Denied: B
+[  143.995073] Turnover ----> A
+[  144.078099] Working: B
+[  144.095754] Working Denied: A
+[  144.154022] Working Denied: C
+[  144.179723] Working: B
+[  144.196246] Working Denied: A
+[  144.258864] Working Denied: C
+[  144.280429] Working: B
+[  144.298262] Working Denied: A
+[  144.363700] Working Denied: C
+[  144.381216] Turnover ----> B
+[  144.399735] Working: A
+[  144.465271] Working Denied: C
+[  144.484269] Working Denied: B
+[  144.501453] Working: A
+[  144.572898] Working Denied: C
+[  144.590075] Working Denied: B
+[  144.606352] Working: A
+[  144.673846] Working Denied: C
+[  144.691701] Working Denied: B
+[  144.708042] Turnover ----> A
+[  144.775178] Working: C
+[  144.793062] Working Denied: B
+[  144.811111] Working Denied: A
+[  144.875828] Working: C
+[  144.894243] Working Denied: B
+[  144.912370] Working Denied: A
+[  144.977994] Working: C
+[  144.996368] Working Denied: B
+[  145.021524] Working Denied: A
+[  145.078841] Turnover ----> C
+[  145.098341] Working: B
+[  145.121950] Working Denied: A
+[  145.179818] Working Denied: C
+[  145.201775] Working: B
+[  145.222888] Working Denied: A
+[  145.281030] Working Denied: C
+[  145.302869] Working: B
+[  145.327155] Working Denied: A
+[  145.385832] Working Denied: C
+[  145.404198] Turnover ----> B
+[  145.427899] Working: A
+[  145.486563] Working Denied: C
+[  145.505015] Working Denied: B
+[  145.529435] Working: A
+[  145.588332] Working Denied: C
+[  145.605470] Working Denied: B
+[  145.630672] Working: A
+[  145.696066] Working Denied: C
+[  145.729490] Working Denied: B
+[  145.732088] Turnover ----> A
+[  145.799535] Working: C
+[  145.832527] Working Denied: A
+[  145.833334] Working Denied: B
+[  145.900671] Working: C
+[  145.933778] Working Denied: A
+[  145.934264] Working Denied: B
+[  146.001165] Working: C
+[  146.034827] Working Denied: A
+[  146.035514] Working Denied: B
+[  146.103422] Turnover ----> C
+[  146.135752] Working Denied: A
+[  146.136562] Working: B
+[  146.204719] Working Denied: C
+[  146.236692] Working Denied: A
+[  146.238047] Working: B
+[  146.306726] Working Denied: C
+[  146.337813] Working Denied: A
+[  146.338633] Working: B
+[  146.407754] Working Denied: C
+[  146.443333] Working Denied: A
+[  146.455828] Turnover ----> B
+[  146.508968] Working Denied: C
+[  146.544581] Working: A
+[  146.563435] Working Denied: B
+[  146.614228] Working Denied: C
+[  146.654449] Working: A
+[  146.696239] Working Denied: B
+[  146.715410] Working Denied: C
+[  146.756076] Working: A
+[  146.797182] Working Denied: B
+[  146.816623] Working Denied: C
+[  146.867129] Turnover ----> A
+[  146.924341] Working: C
+[  146.932113] Working Denied: B
+[  146.968274] Working Denied: A
+[  147.024584] Working: C
+[  147.036129] Working Denied: B
+[  147.070446] Working Denied: A
+[  147.136985] Working Denied: B
+[  147.137971] Working: C
+[  147.185723] Working Denied: A
+[  147.250553] Turnover ----> C
+[  147.270451] Working: B
+[  147.286021] Working Denied: A
+[  147.352213] Working Denied: C
+[  147.373513] Working: B
+[  147.388200] Working Denied: A
+[  147.453887] Working Denied: C
+[  147.474998] Working: B
+[  147.497186] Working Denied: A
+[  147.555895] Working Denied: C
+[  147.576607] Turnover ----> B
+[  147.599003] Working: A
+[  147.664097] Working Denied: C
+[  147.678313] Working Denied: B
+[  147.699667] Working: A
+[  147.765338] Working Denied: C
+[  147.779698] Working Denied: B
+[  147.801657] Working: A
+[  147.866139] Working Denied: C
+[  147.882317] Working Denied: B
+[  147.905490] Turnover ----> A
+[  147.968238] Working: C
+[  147.983119] Working Denied: B
+[  148.013485] Working Denied: A
+[  148.070454] Working: C
+[  148.084050] Working Denied: B
+[  148.115065] Working Denied: A
+[  148.170639] Working: C
+[  148.186228] Working Denied: B
+[  148.216283] Working Denied: A
+[  148.271189] Turnover ----> C
+[  148.287519] Working: B
+[  148.317080] Working Denied: A
+[  148.371759] Working Denied: C
+[  148.387988] Working: B
+[  148.420697] Working Denied: A
+[  148.472640] Working Denied: C
+[  148.488716] Working: B
+[  148.528028] Working Denied: A
+[  148.576347] Working Denied: C
+[  148.589270] Turnover ----> B
+[  148.628563] Working: A
+[  148.678095] Working Denied: C
+[  148.691485] Working Denied: B
+[  148.730566] Working: A
+[  148.780053] Working Denied: C
+[  148.791980] Working Denied: B
+[  148.835161] Working: A
+[  148.883874] Working Denied: C
+[  148.892748] Working Denied: B
+[  148.937873] Turnover ----> A
+[  148.984567] Working: C
+[  148.993284] Working Denied: B
+[  149.040231] Working Denied: A
+[  149.087647] Working: C
+[  149.094498] Working Denied: B
+[  149.146071] Working Denied: A
+[  149.189165] Working: C
+[  149.196154] Working Denied: B
+[  149.252507] Working Denied: A
+[  149.289887] Turnover ----> C
+[  149.297422] Working: B
+[  149.354713] Working Denied: A
+[  149.393467] Working Denied: C
+[  149.401337] Working: B
+[  149.455157] Working Denied: A
+[  149.495639] Working Denied: C
+[  149.501750] Working: B
+[  149.556580] Working Denied: A
+[  149.606297] Working Denied: C
+[  149.611369] Turnover ----> B
+[  149.660277] Working: A
+[  149.707992] Working Denied: C
+[  149.715413] Working Denied: B
+[  149.763118] Working: A
+[  149.820615] Working Denied: C
+[  149.823354] Working Denied: B
+[  149.864891] Working: A
+[  149.922688] Working Denied: C
+[  149.925676] Working Denied: B
+[  149.967089] Turnover ----> A
+[  150.024100] Working: C
+[  150.026759] Working Denied: B
+[  150.069947] Working Denied: A
+[  150.127116] Working: C
+[  150.127423] Working Denied: B
+[  150.170378] Working Denied: A
+[  150.227417] Working: C
+[  150.236541] Working Denied: B
+[  150.275394] Working Denied: A
+[  150.331620] Turnover ----> C
+[  150.339817] Working: B
+[  150.376992] Working Denied: A
+[  150.433479] Working Denied: C
+[  150.441150] Working: B
+[  150.477758] Working Denied: A
+[  150.534827] Working Denied: C
+[  150.542612] Working: B
+[  150.578155] Working Denied: A
+[  150.635603] Working Denied: C
+[  150.666268] Turnover ----> B
+[  150.678484] Working: A
+[  150.747623] Working Denied: C
+[  150.767461] Working Denied: B
+[  150.779904] Working: A
+[  150.849897] Working Denied: C
+[  150.869397] Working Denied: B
+[  150.881635] Working: A
+[  150.951464] Working Denied: C
+[  150.971251] Working Denied: B
+[  150.982960] Turnover ----> A
+[  151.055906] Working: C
+[  151.072422] Working Denied: B
+[  151.083873] Working Denied: A
+[  151.159561] Working: C
+[  151.173403] Working Denied: B
+[  151.187779] Working Denied: A
+[  151.260499] Working: C
+[  151.273985] Working Denied: B
+[  151.289849] Working Denied: A
+[  151.361231] Turnover ----> C
+[  151.375391] Working: B
+[  151.390108] Working Denied: A
+[  151.462720] Working Denied: C
+[  151.476875] Working: B
+[  151.496471] Working Denied: A
+[  151.563576] Working Denied: C
+[  151.578221] Working: B
+[  151.597997] Working Denied: A
+[  151.664488] Working Denied: C
+[  151.683728] Turnover ----> B
+[  151.699229] Working: A
+[  151.765540] Working Denied: C
+[  151.784661] Working Denied: B
+[  151.801829] Working: A
+[  151.866866] Working Denied: C
+[  151.885791] Working Denied: B
+[  151.902889] Working: A
+[  151.969984] Working Denied: C
+[  151.987723] Working Denied: B
+[  152.003444] Turnover ----> A
+[  152.072061] Working: C
+[  152.088878] Working Denied: B
+[  152.112534] Working Denied: A
+[  152.172626] Working: C
+[  152.196902] Working Denied: B
+[  152.217299] Working Denied: A
+[  152.274492] Working: C
+[  152.298421] Working Denied: B
+[  152.318014] Working Denied: A
+[  152.385892] Turnover ----> C
+[  152.399448] Working: B
+[  152.423862] Working Denied: A
+[  152.486528] Working Denied: C
+[  152.500501] Working: B
+[  152.525633] Working Denied: A
+[  152.587043] Working Denied: C
+[  152.602071] Working: B
+[  152.637519] Working Denied: A
+[  152.688861] Working Denied: C
+[  152.703322] Turnover ----> B
+[  152.744093] Working: A
+[  152.790121] Working Denied: C
+[  152.806829] Working Denied: B
+[  152.849179] Working: A
+[  152.891292] Working Denied: C
+[  152.907420] Working Denied: B
+[  152.950659] Working: A
+[  152.992543] Working Denied: C
+[  153.007724] Working Denied: B
+[  153.056059] Turnover ----> A
+[  153.101476] Working: C
+[  153.108855] Working Denied: B
+[  153.158459] Working Denied: A
+[  153.203470] Working: C
+[  153.209459] Working Denied: B
+[  153.259317] Working Denied: A
+[  153.309395] Working: C
+[  153.309845] Working Denied: B
+[  153.361382] Working Denied: A
+[  153.409946] Turnover ----> C
+[  153.411216] Working: B
+[  153.461846] Working Denied: A
+[  153.510647] Working Denied: C
+[  153.513680] Working: B
+[  153.563775] Working Denied: A
+[  153.611052] Working Denied: C
+[  153.614703] Working: B
+[  153.664512] Working Denied: A
+[  153.711749] Working Denied: C
+[  153.714953] Turnover ----> B
+[  153.765288] Working: A
+[  153.819378] Working Denied: C
+[  153.821002] Working Denied: B
+[  153.866216] Working: A
+[  153.921350] Working Denied: C
+[  153.921351] Working Denied: B
+[  153.968218] Working: A
+[  154.032175] Working Denied: C
+[  154.032102] Working Denied: B
+[  154.071921] Turnover ----> A
+[  154.132528] Working: C
+[  154.132568] Working Denied: B
+[  154.174696] Working Denied: A
+[  154.236977] Working: C
+[  154.236964] Working Denied: B
+[  154.279032] Working Denied: A
+[  154.337913] Working: C
+[  154.337914] Working Denied: B
+[  154.379569] Working Denied: A
+[  154.438280] Process Finished: C
+[  154.439898] Working: B
+[  154.490217] Working Denied: A
+[  154.547928] Working: B
+[  154.592312] Working Denied: A
+[  154.649458] Working: B
+[  154.695707] Working Denied: A
+[  154.750735] Turnover ----> B
+[  154.798401] Working: A
+[  154.851771] Working Denied: B
+[  154.899506] Working: A
+[  154.953583] Working Denied: B
+[  154.999695] Working: A
+[  155.055636] Working Denied: B
+[  155.100345] Turnover ----> A
+[  155.156759] Working: B
+[  155.204385] Working Denied: A
+[  155.258661] Working: B
+[  155.307339] Working Denied: A
+[  155.359446] Working: B
+[  155.408615] Working Denied: A
+[  155.461098] Turnover ----> B
+[  155.510698] Working: A
+[  155.562263] Working Denied: B
+[  155.611765] Working: A
+[  155.662973] Working Denied: B
+[  155.712588] Working: A
+[  155.763862] Working Denied: B
+[  155.815582] Turnover ----> A
+[  155.865038] Working: B
+[  155.919648] Working Denied: A
+[  155.965751] Working: B
+[  156.021821] Working Denied: A
+[  156.068648] Working: B
+[  156.123425] Working Denied: A
+[  156.171803] Turnover ----> B
+[  156.225435] Working: A
+[  156.272674] Working Denied: B
+[  156.326394] Working: A
+[  156.373553] Working Denied: B
+[  156.427679] Working: A
+[  156.476255] Working Denied: B
+[  156.529450] Turnover ----> A
+[  156.581245] Working: B
+[  156.630778] Working Denied: A
+[  156.682566] Working: B
+[  156.736909] Working Denied: A
+[  156.788901] Working: B
+[  156.838287] Working Denied: A
+[  156.894106] Turnover ----> B
+[  156.946992] Working: A
+[  156.995479] Working Denied: B
+[  157.048483] Working: A
+[  157.100065] Working Denied: B
+[  157.158924] Working: A
+[  157.202081] Working Denied: B
+[  157.259912] Turnover ----> A
+[  157.310202] Working: B
+[  157.365118] Working Denied: A
+[  157.411572] Working: B
+[  157.499793] Working Denied: A
+[  157.512750] Working: B
+[  157.600235] Working Denied: A
+[  157.613269] Turnover ----> B
+[  157.702294] Working: A
+[  157.714589] Working Denied: B
+[  157.805313] Working: A
+[  157.815806] Working Denied: B
+[  157.906893] Working: A
+[  157.917323] Working Denied: B
+[  158.008906] Turnover ----> A
+[  158.018284] Working: B
+[  158.109584] Working Denied: A
+[  158.119213] Working: B
+[  158.212812] Working Denied: A
+[  158.220601] Process Finished: B
+[  158.314567] Working: A
+[  158.416435] Working: A
+[  158.524413] Working: A
+[  158.624965] Turnover ----> A
+[  158.726169] Working: A
+[  158.826978] Working: A
+[  158.928655] Working: A
+[  159.029266] Turnover ----> A
+[  159.132995] Working: A
+[  159.234743] Working: A
+[  159.345340] Working: A
+[  159.446875] Turnover ----> A
+[  159.548855] Working: A
+[  159.651711] Working: A
+[  159.752932] Working: A
+[  159.854459] Turnover ----> A
+[  159.954935] Working: A
+[  160.056771] Process Finished: A
+alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ 

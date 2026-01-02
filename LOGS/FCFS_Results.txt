@@ -1,0 +1,329 @@
+alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ ./run
+Testing FCFS Scheduling
+
+Process A : I will use CPU by 7s. 
+
+Process B : I will use CPU by 5s. 
+
+Process C : I will use CPU by 3s. 
+
+Process A : Finish! My response time is 0s and my total wait time is 0s. 
+Process B : Finish! My response time is 6s and my total wait time is 6s. 
+Process C : Finish! My response time is 10s and my total wait time is 10s. alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ dmesg
+[  359.120428] Working: A
+[  359.222096] Working: A
+[  359.330884] Working: A
+[  359.432727] Working: A
+[  359.533188] Working: A
+[  359.635137] Working: A
+[  359.739806] Working: A
+[  359.843246] Working: A
+[  359.944706] Working: A
+[  360.049114] Working: A
+[  360.122496] Working Denied: B
+[  360.156946] Working: A
+[  360.223310] Working Denied: B
+[  360.264030] Working: A
+[  360.325040] Working Denied: B
+[  360.365071] Working: A
+[  360.426505] Working Denied: B
+[  360.466951] Working: A
+[  360.538674] Working Denied: B
+[  360.568270] Working: A
+[  360.641243] Working Denied: B
+[  360.676456] Working: A
+[  360.746860] Working Denied: B
+[  360.778054] Working: A
+[  360.850809] Working Denied: B
+[  360.880107] Working: A
+[  360.952502] Working Denied: B
+[  360.981435] Working: A
+[  361.057455] Working Denied: B
+[  361.088717] Working: A
+[  361.159069] Working Denied: B
+[  361.167408] Working Denied: C
+[  361.191334] Working: A
+[  361.259420] Working Denied: B
+[  361.268670] Working Denied: C
+[  361.294765] Working: A
+[  361.360587] Working Denied: B
+[  361.369905] Working Denied: C
+[  361.396731] Working: A
+[  361.462175] Working Denied: B
+[  361.470524] Working Denied: C
+[  361.504742] Working: A
+[  361.563897] Working Denied: B
+[  361.572381] Working Denied: C
+[  361.604926] Working: A
+[  361.664661] Working Denied: B
+[  361.676851] Working Denied: C
+[  361.706319] Working: A
+[  361.768086] Working Denied: B
+[  361.786482] Working Denied: C
+[  361.808154] Working: A
+[  361.873449] Working Denied: B
+[  361.889113] Working Denied: C
+[  361.910505] Working: A
+[  361.977223] Working Denied: B
+[  361.989635] Working Denied: C
+[  362.015095] Working: A
+[  362.082193] Working Denied: B
+[  362.091577] Working Denied: C
+[  362.116062] Working: A
+[  362.183215] Working Denied: B
+[  362.192342] Working Denied: C
+[  362.218867] Working: A
+[  362.288040] Working Denied: B
+[  362.294827] Working Denied: C
+[  362.319759] Working: A
+[  362.389569] Working Denied: B
+[  362.395744] Working Denied: C
+[  362.421063] Working: A
+[  362.491503] Working Denied: B
+[  362.497138] Working Denied: C
+[  362.522602] Working: A
+[  362.593169] Working Denied: B
+[  362.598314] Working Denied: C
+[  362.623996] Working: A
+[  362.695233] Working Denied: B
+[  362.699636] Working Denied: C
+[  362.726131] Working: A
+[  362.799257] Working Denied: B
+[  362.804459] Working Denied: C
+[  362.826487] Working: A
+[  362.901805] Working Denied: B
+[  362.906448] Working Denied: C
+[  362.927222] Working: A
+[  363.003785] Working Denied: B
+[  363.009763] Working Denied: C
+[  363.028620] Working: A
+[  363.104351] Working Denied: B
+[  363.110439] Working Denied: C
+[  363.129753] Working: A
+[  363.205614] Working Denied: B
+[  363.211420] Working Denied: C
+[  363.233180] Working: A
+[  363.307812] Working Denied: B
+[  363.313557] Working Denied: C
+[  363.334311] Working: A
+[  363.409231] Working Denied: B
+[  363.414212] Working Denied: C
+[  363.435963] Working: A
+[  363.512692] Working Denied: B
+[  363.522165] Working Denied: C
+[  363.543308] Working: A
+[  363.614175] Working Denied: B
+[  363.627960] Working Denied: C
+[  363.668655] Working: A
+[  363.715175] Working Denied: B
+[  363.728569] Working Denied: C
+[  363.769914] Working: A
+[  363.816104] Working Denied: B
+[  363.831171] Working Denied: C
+[  363.878866] Working: A
+[  363.920103] Working Denied: B
+[  363.939701] Working Denied: C
+[  364.000052] Working: A
+[  364.021412] Working Denied: B
+[  364.040519] Working Denied: C
+[  364.108001] Working: A
+[  364.122466] Working Denied: B
+[  364.141543] Working Denied: C
+[  364.208334] Working: A
+[  364.223499] Working Denied: B
+[  364.242608] Working Denied: C
+[  364.309365] Working: A
+[  364.325439] Working Denied: B
+[  364.343799] Working Denied: C
+[  364.415283] Working: A
+[  364.426020] Working Denied: B
+[  364.446555] Working Denied: C
+[  364.516913] Working: A
+[  364.527452] Working Denied: B
+[  364.546986] Working Denied: C
+[  364.619140] Working: A
+[  364.633275] Working Denied: B
+[  364.648363] Working Denied: C
+[  364.720451] Working: A
+[  364.734215] Working Denied: B
+[  364.750123] Working Denied: C
+[  364.822081] Working: A
+[  364.835562] Working Denied: B
+[  364.850640] Working Denied: C
+[  364.922878] Working: A
+[  364.937374] Working Denied: B
+[  364.951226] Working Denied: C
+[  365.023919] Working: A
+[  365.037783] Working Denied: B
+[  365.051980] Working Denied: C
+[  365.125495] Working: A
+[  365.139324] Working Denied: B
+[  365.157673] Working Denied: C
+[  365.226654] Working: A
+[  365.240201] Working Denied: B
+[  365.258085] Working Denied: C
+[  365.329020] Working: A
+[  365.341050] Working Denied: B
+[  365.360898] Working Denied: C
+[  365.430549] Working: A
+[  365.442015] Working Denied: B
+[  365.461583] Working Denied: C
+[  365.531778] Working: A
+[  365.544066] Working Denied: B
+[  365.563188] Working Denied: C
+[  365.633831] Working: A
+[  365.644990] Working Denied: B
+[  365.665705] Working Denied: C
+[  365.736668] Working: A
+[  365.762192] Working Denied: B
+[  365.772292] Working Denied: C
+[  365.837004] Working: A
+[  365.862604] Working Denied: B
+[  365.872576] Working Denied: C
+[  365.938280] Working: A
+[  365.963414] Working Denied: B
+[  365.973360] Working Denied: C
+[  366.040429] Working: A
+[  366.064614] Working Denied: B
+[  366.074299] Working Denied: C
+[  366.142505] Working: A
+[  366.165070] Working Denied: B
+[  366.175184] Working Denied: C
+[  366.244038] Working: A
+[  366.266697] Working Denied: B
+[  366.276762] Working Denied: C
+[  366.348945] Process Finished: A
+[  366.368852] Working: B
+[  366.377712] Working Denied: C
+[  366.472869] Working: B
+[  366.477838] Working Denied: C
+[  366.581865] Working Denied: C
+[  366.586766] Working: B
+[  366.683052] Working Denied: C
+[  366.688418] Working: B
+[  366.784113] Working Denied: C
+[  366.789698] Working: B
+[  366.885169] Working Denied: C
+[  366.892082] Working: B
+[  366.986153] Working Denied: C
+[  366.993345] Working: B
+[  367.086936] Working Denied: C
+[  367.093759] Working: B
+[  367.193523] Working Denied: C
+[  367.201214] Working: B
+[  367.296759] Working Denied: C
+[  367.304623] Working: B
+[  367.399179] Working Denied: C
+[  367.405327] Working: B
+[  367.500814] Working Denied: C
+[  367.507461] Working: B
+[  367.602289] Working Denied: C
+[  367.610401] Working: B
+[  367.709079] Working Denied: C
+[  367.717650] Working: B
+[  367.810862] Working Denied: C
+[  367.819648] Working: B
+[  367.912466] Working Denied: C
+[  367.920712] Working: B
+[  368.013878] Working Denied: C
+[  368.022049] Working: B
+[  368.117030] Working Denied: C
+[  368.123282] Working: B
+[  368.220641] Working Denied: C
+[  368.223949] Working: B
+[  368.321688] Working Denied: C
+[  368.325309] Working: B
+[  368.422869] Working Denied: C
+[  368.426546] Working: B
+[  368.523877] Working Denied: C
+[  368.528255] Working: B
+[  368.625458] Working Denied: C
+[  368.630980] Working: B
+[  368.726839] Working Denied: C
+[  368.731920] Working: B
+[  368.827092] Working Denied: C
+[  368.832664] Working: B
+[  368.937775] Working: B
+[  368.937811] Working Denied: C
+[  369.049502] Working: B
+[  369.049541] Working Denied: C
+[  369.168395] Working Denied: C
+[  369.168420] Working: B
+[  369.277194] Working Denied: C
+[  369.277229] Working: B
+[  369.393076] Working: B
+[  369.393114] Working Denied: C
+[  369.509856] Working Denied: C
+[  369.509870] Working: B
+[  369.623496] Working: B
+[  369.623533] Working Denied: C
+[  369.785358] Working Denied: C
+[  369.785395] Working: B
+[  369.888382] Working: B
+[  369.888420] Working Denied: C
+[  369.994681] Working Denied: C
+[  369.994717] Working: B
+[  370.095864] Working: B
+[  370.095882] Working Denied: C
+[  370.208428] Working Denied: C
+[  370.208466] Working: B
+[  370.317083] Working: B
+[  370.317121] Working Denied: C
+[  370.431882] Working Denied: C
+[  370.431919] Working: B
+[  370.535092] Working: B
+[  370.535132] Working Denied: C
+[  370.641498] Working: B
+[  370.641534] Working Denied: C
+[  370.745831] Working Denied: C
+[  370.745869] Working: B
+[  370.846998] Working: B
+[  370.847036] Working Denied: C
+[  370.959831] Working Denied: C
+[  370.959853] Working: B
+[  371.062471] Working: B
+[  371.062508] Working Denied: C
+[  371.168636] Working Denied: C
+[  371.168672] Working: B
+[  371.301899] Working: B
+[  371.301937] Working Denied: C
+[  371.407434] Working Denied: C
+[  371.407451] Working: B
+[  371.512893] Working Denied: C
+[  371.512930] Working: B
+[  371.622327] Working: B
+[  371.622366] Working Denied: C
+[  371.728164] Working Denied: C
+[  371.728202] Process Finished: B
+[  371.830955] Working: C
+[  371.935246] Working: C
+[  372.073733] Working: C
+[  372.174791] Working: C
+[  372.277334] Working: C
+[  372.386394] Working: C
+[  372.494196] Working: C
+[  372.595456] Working: C
+[  372.702494] Working: C
+[  372.803625] Working: C
+[  372.905753] Working: C
+[  373.010377] Working: C
+[  373.113928] Working: C
+[  373.214932] Working: C
+[  373.316343] Working: C
+[  373.420921] Working: C
+[  373.522630] Working: C
+[  373.636387] Working: C
+[  373.740724] Working: C
+[  373.860422] Working: C
+[  373.961146] Working: C
+[  374.073995] Working: C
+[  374.174976] Working: C
+[  374.282201] Working: C
+[  374.383191] Working: C
+[  374.485104] Working: C
+[  374.592687] Working: C
+[  374.695792] Working: C
+[  374.802734] Working: C
+[  374.903798] Working: C
+[  375.019041] Process Finished: C
+alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ 

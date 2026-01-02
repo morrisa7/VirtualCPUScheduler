@@ -1,0 +1,283 @@
+alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ ./run 
+Testing SRTF Scheduling
+
+Process A : I will use CPU by 7s. 
+
+Process B : I will use CPU by 5s. 
+
+Process C : I will use CPU by 3s. 
+
+Process C : Finish! My response time is 0s and my total wait time is 0s. 
+Process B : Finish! My response time is 0s and my total wait time is 3s. 
+Process A : Finish! My response time is 0s and my total wait time is 8s. alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ dmesg
+[  880.584835] Turnover --> A
+[  880.686295] Working: A
+[  880.791128] Working: A
+[  880.892418] Working: A
+[  880.995224] Working: A
+[  881.099147] Working: A
+[  881.200626] Working: A
+[  881.306059] Working: A
+[  881.407933] Working: A
+[  881.512290] Working: A
+[  881.611324] Turnover --> B
+[  881.620223] Working Denied: A
+[  881.713499] Working: B
+[  881.732772] Working Denied: A
+[  881.829184] Working: B
+[  881.837177] Working Denied: A
+[  881.930253] Working: B
+[  881.945223] Working Denied: A
+[  882.035450] Working: B
+[  882.048977] Working Denied: A
+[  882.136507] Working: B
+[  882.158618] Working Denied: A
+[  882.244169] Working: B
+[  882.262945] Working Denied: A
+[  882.346725] Working: B
+[  882.382846] Working Denied: A
+[  882.447112] Working: B
+[  882.483797] Working Denied: A
+[  882.551209] Working: B
+[  882.586478] Working Denied: A
+[  882.588554] Turnover --> C
+[  882.692340] Working: C
+[  882.692319] Working Denied: A
+[  882.693062] Working Denied: B
+[  882.793893] Working Denied: A
+[  882.794756] Working: C
+[  882.794756] Working Denied: B
+[  882.895472] Working Denied: A
+[  882.896383] Working: C
+[  882.896327] Working Denied: B
+[  882.997648] Working Denied: A
+[  882.998706] Working Denied: B
+[  883.000775] Working: C
+[  883.098444] Working Denied: A
+[  883.105135] Working Denied: B
+[  883.105667] Working: C
+[  883.199455] Working Denied: A
+[  883.206687] Working: C
+[  883.207670] Working Denied: B
+[  883.301281] Working Denied: A
+[  883.307633] Working: C
+[  883.310004] Working Denied: B
+[  883.402227] Working Denied: A
+[  883.411604] Working: C
+[  883.416263] Working Denied: B
+[  883.504981] Working Denied: A
+[  883.512458] Working: C
+[  883.519637] Working Denied: B
+[  883.606642] Working Denied: A
+[  883.612958] Working: C
+[  883.622387] Working Denied: B
+[  883.708532] Working Denied: A
+[  883.714420] Working: C
+[  883.724557] Working Denied: B
+[  883.810433] Working Denied: A
+[  883.819981] Working: C
+[  883.826815] Working Denied: B
+[  883.913676] Working Denied: A
+[  883.924985] Working: C
+[  883.927214] Working Denied: B
+[  884.015963] Working Denied: A
+[  884.029376] Working: C
+[  884.034080] Working Denied: B
+[  884.126945] Working Denied: A
+[  884.140569] Working: C
+[  884.142117] Working Denied: B
+[  884.227849] Working Denied: A
+[  884.246993] Working: C
+[  884.247118] Working Denied: B
+[  884.332861] Working Denied: A
+[  884.348876] Working: C
+[  884.349452] Working Denied: B
+[  884.434953] Working Denied: A
+[  884.451956] Working Denied: B
+[  884.454562] Working: C
+[  884.536285] Working Denied: A
+[  884.554755] Working Denied: B
+[  884.555667] Working: C
+[  884.638465] Working Denied: A
+[  884.655440] Working Denied: B
+[  884.656443] Working: C
+[  884.743384] Working Denied: A
+[  884.756087] Working Denied: B
+[  884.758388] Working: C
+[  884.848919] Working Denied: A
+[  884.859079] Working Denied: B
+[  884.860504] Working: C
+[  884.950550] Working Denied: A
+[  884.964998] Working Denied: B
+[  884.965684] Working: C
+[  885.058177] Working Denied: A
+[  885.071223] Working Denied: B
+[  885.071694] Working: C
+[  885.160118] Working Denied: A
+[  885.172767] Working: C
+[  885.172917] Working Denied: B
+[  885.263641] Working Denied: A
+[  885.276303] Working Denied: B
+[  885.277304] Working: C
+[  885.364904] Working Denied: A
+[  885.377508] Working Denied: B
+[  885.380730] Working: C
+[  885.468224] Working Denied: A
+[  885.480501] Working Denied: B
+[  885.482560] Working: C
+[  885.570308] Working Denied: A
+[  885.582095] Working Denied: B
+[  885.583031] Working: C
+[  885.671180] Working Denied: A
+[  885.683609] Working Denied: B
+[  885.684179] Working: C
+[  885.771661] Working Denied: A
+[  885.789574] Working Denied: B
+[  885.791382] Process Finished: C
+[  885.882248] Turnover --> A
+[  885.891795] Working: B
+[  885.991357] Working Denied: A
+[  886.001844] Working: B
+[  886.096744] Working Denied: A
+[  886.108117] Working: B
+[  886.198104] Working Denied: A
+[  886.209729] Working: B
+[  886.300297] Working Denied: A
+[  886.311849] Working: B
+[  886.402288] Working Denied: A
+[  886.415016] Working: B
+[  886.504929] Working Denied: A
+[  886.516057] Working: B
+[  886.606924] Working Denied: A
+[  886.617300] Working: B
+[  886.709060] Working Denied: A
+[  886.719005] Working: B
+[  886.834389] Working Denied: A
+[  886.834430] Working: B
+[  886.936118] Working Denied: A
+[  886.936153] Working: B
+[  887.039169] Working Denied: A
+[  887.039213] Working: B
+[  887.142052] Working Denied: A
+[  887.142085] Working: B
+[  887.243160] Working Denied: A
+[  887.243194] Working: B
+[  887.346003] Working Denied: A
+[  887.346034] Working: B
+[  887.446459] Working Denied: A
+[  887.446498] Working: B
+[  887.554692] Working Denied: A
+[  887.554846] Working: B
+[  887.655982] Working Denied: A
+[  887.656032] Working: B
+[  887.757741] Working: B
+[  887.757778] Working Denied: A
+[  887.866970] Working: B
+[  887.867014] Working Denied: A
+[  887.968441] Working Denied: A
+[  887.968480] Working: B
+[  888.070396] Working Denied: A
+[  888.070426] Working: B
+[  888.173255] Working Denied: A
+[  888.173289] Working: B
+[  888.274709] Working: B
+[  888.274745] Working Denied: A
+[  888.376531] Working: B
+[  888.376573] Working Denied: A
+[  888.477066] Working: B
+[  888.477101] Working Denied: A
+[  888.586355] Working: B
+[  888.586395] Working Denied: A
+[  888.687339] Working Denied: A
+[  888.687376] Working: B
+[  888.788057] Working: B
+[  888.788096] Working Denied: A
+[  888.890029] Working Denied: A
+[  888.890061] Working: B
+[  889.001000] Working Denied: A
+[  889.001030] Working: B
+[  889.102491] Working Denied: A
+[  889.102527] Working: B
+[  889.203797] Working Denied: A
+[  889.203835] Working: B
+[  889.305817] Working: B
+[  889.305852] Working Denied: A
+[  889.408839] Working: B
+[  889.408877] Working Denied: A
+[  889.511617] Working: B
+[  889.511657] Working Denied: A
+[  889.614213] Working Denied: A
+[  889.614251] Working: B
+[  889.715023] Working: B
+[  889.715057] Working Denied: A
+[  889.816112] Working Denied: A
+[  889.816149] Working: B
+[  889.917217] Working Denied: A
+[  889.917253] Working: B
+[  890.017990] Working Denied: A
+[  890.018025] Working: B
+[  890.119684] Process Finished: B
+[  890.120446] Turnover --> A
+[  890.221144] Working: A
+[  890.322600] Working: A
+[  890.423329] Working: A
+[  890.525086] Working: A
+[  890.626290] Working: A
+[  890.727221] Working: A
+[  890.829447] Working: A
+[  890.930003] Working: A
+[  891.031571] Working: A
+[  891.133801] Working: A
+[  891.235597] Working: A
+[  891.337222] Working: A
+[  891.440400] Working: A
+[  891.542200] Working: A
+[  891.643334] Working: A
+[  891.745194] Working: A
+[  891.847331] Working: A
+[  891.948491] Working: A
+[  892.049464] Working: A
+[  892.150125] Working: A
+[  892.251619] Working: A
+[  892.353101] Working: A
+[  892.453766] Working: A
+[  892.554364] Working: A
+[  892.654988] Working: A
+[  892.755827] Working: A
+[  892.856843] Working: A
+[  892.957918] Working: A
+[  893.059503] Working: A
+[  893.160273] Working: A
+[  893.261686] Working: A
+[  893.362205] Working: A
+[  893.462759] Working: A
+[  893.563062] Working: A
+[  893.664183] Working: A
+[  893.766239] Working: A
+[  893.868599] Working: A
+[  893.970650] Working: A
+[  894.072335] Working: A
+[  894.173550] Working: A
+[  894.275558] Working: A
+[  894.377181] Working: A
+[  894.479104] Working: A
+[  894.580876] Working: A
+[  894.682043] Working: A
+[  894.783403] Working: A
+[  894.884534] Working: A
+[  894.985598] Working: A
+[  895.087350] Working: A
+[  895.189154] Working: A
+[  895.291493] Working: A
+[  895.393133] Working: A
+[  895.494701] Working: A
+[  895.596835] Working: A
+[  895.698011] Working: A
+[  895.799443] Working: A
+[  895.900208] Working: A
+[  896.002073] Working: A
+[  896.103653] Working: A
+[  896.204999] Working: A
+[  896.307275] Working: A
+[  896.408012] Process Finished: A
+alanna@alanna-VirtualBox:/usr/src/linux-4.20.11$ 

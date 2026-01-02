@@ -1,0 +1,15 @@
+#!/bin/bash
+
+echo "Testing RR Scheduling"
+./ku_cpu_user 7 0 A &
+./ku_cpu_user 5 1 B &
+./ku_cpu_user 3 2 C &
+wait
+
+
+
+
+
+
+
+
